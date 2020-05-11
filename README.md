@@ -1,5 +1,8 @@
 # Google reCAPTCHA v2 Authenticator Plugin Example #
 
+[![Quality](https://curity.io/assets/images/badges/captcha-authenticator-quality.svg)](https://curity.io/resources/code-examples/status/)
+[![Availability](https://curity.io/assets/images/badges/captcha-authenticator-availability.svg)](https://curity.io/resources/code-examples/status/)
+
 This is a sample Authenticator plugin for the Curity Identity Server.
 
 It demonstrates how to build a simple plugin that can be used to authenticate via Google's reCAPTCHA v2. Please note
