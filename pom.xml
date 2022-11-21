@@ -4,16 +4,6 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <repositories>
-        <repository>
-            <id>customer-release-repo</id>
-            <url>https://nexus.curity.se/nexus/content/repositories/customer-release-repo</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-
     <groupId>io.curity.identityserver.plugin</groupId>
     <artifactId>identityserver.plugins.authenticators.captcha</artifactId>
     <version>1.0.0</version>
@@ -23,6 +13,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <libPluginsDir>lib/plugins/authenticator-captcha</libPluginsDir>
+        <project.curityVersion>7.5.1</project.curityVersion>
+        <project.slf4jVersion>2.0.3</project.slf4jVersion>
     </properties>
 
     <build>
@@ -32,8 +24,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>17</source>
+                    <target>17</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -41,7 +33,8 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.0.0</version>
                 <configuration>
-                    <outputDirectory>${DIST_DIR}/${libPluginsDir}</outputDirectory>
+                    <!-- <outputDirectory>${DIST_DIR}/${libPluginsDir}</outputDirectory> -->
+                    <outputDirectory>target/lib</outputDirectory>
                     <archive>
                         <manifestEntries>
                             <Implementation-Title>CAPTCHA-Authenticator-Plugin</Implementation-Title>
@@ -59,26 +52,15 @@
         <dependency>
             <groupId>se.curity.identityserver</groupId>
             <artifactId>identityserver.sdk</artifactId>
-            <version>2.2.0</version>
+            <version>${project.curityVersion}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.22</version>
+            <version>${project.slf4jVersion}</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
-
-    <distributionManagement>
-        <repository>
-            <id>curity-release-repo</id>
-            <name>Curity Nexus Release Repository</name>
-            <url>https://nexus.curity.se/nexus/content/repositories/twobo-release-repo/</url>
-        </repository>
-        <snapshotRepository>
-            <id>curity-snapshot-repo</id>
-            <name>Curity Nexus Snapshot Repository</name>
-            <url>https://nexus.curity.se/nexus/content/repositories/twobo-snapshot-repo/</url>
-        </snapshotRepository>
-    </distributionManagement>
 
 </project>
