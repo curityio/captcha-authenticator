@@ -59,7 +59,7 @@
         <dependency>
             <groupId>se.curity.identityserver</groupId>
             <artifactId>identityserver.sdk</artifactId>
-            <version>2.2.0</version>
+            <version>8.0.0</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -67,18 +67,5 @@
             <version>1.7.22</version>
         </dependency>
     </dependencies>
-
-    <distributionManagement>
-        <repository>
-            <id>curity-release-repo</id>
-            <name>Curity Nexus Release Repository</name>
-            <url>https://nexus.curity.se/nexus/content/repositories/twobo-release-repo/</url>
-        </repository>
-        <snapshotRepository>
-            <id>curity-snapshot-repo</id>
-            <name>Curity Nexus Snapshot Repository</name>
-            <url>https://nexus.curity.se/nexus/content/repositories/twobo-snapshot-repo/</url>
-        </snapshotRepository>
-    </distributionManagement>
 
 </project>
