@@ -36,7 +36,7 @@ public interface CaptchaAuthenticatorPluginConfig extends Configuration
 
     @Description(
             "The URL pointing to where the CAPTCHA verification request will be sent. Should normally not be changed.")
-    @DefaultURI("https://www.google.com/recaptcha/api/siteverify")
+    @DefaultURI("https://hcaptcha.com/siteverify")
     URI getVerificationURL();
 
     @Description("The HTTP client to be used when sending the CAPTCHA verification request")

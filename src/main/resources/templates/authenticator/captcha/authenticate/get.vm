@@ -15,7 +15,7 @@
 *#
 
 #define ($_body)
-<script src='https://www.google.com/recaptcha/api.js' $!nonceAttr></script>
+<script src='https://js.hcaptcha.com/1/api.js' $!nonceAttr></script>
 <h2>#message("authenticator.captcha-authenticator.authenticate.view.top-header")</h2>
 <form method="post" action="?">
 
@@ -28,5 +28,4 @@
     <input type="submit" value="Submit">
 </form>
 #end
-
 #parse("layouts/default")
