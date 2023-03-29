@@ -1,0 +1,9 @@
+services:
+  plugin:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/plugin
+    environment:
+      DIST_DIR: dist
